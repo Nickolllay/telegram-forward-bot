@@ -18,8 +18,8 @@ def run_http():
 t = threading.Thread(target=run_http, daemon=True)
 t.start()
 
-api_id = int(os.environ["26243748"])
-api_hash = os.environ["3aed6ebb8ff9315b4d1eef9fc8a317a7"]
+api_id = 26243748
+api_hash = "7abdc6cfd59c3c18c70bc5bdf8e22c7b"
 
 TARGET_CHAT_ID = int(os.environ["e_trade_e"])
 
