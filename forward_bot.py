@@ -1,3 +1,25 @@
+import os
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+class PingHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"OK")
+
+def run_http():
+    port = int(os.environ.get("PORT", 8000)) 
+    server = HTTPServer(("0.0.0.0", port), PingHandler)
+    print(f"HTTP server listening on port {port}")
+    server.serve_forever()
+    
+t = threading.Thread(target=run_http, daemon=True)
+t.start()
+
+client.start()
+client.run_until_disconnected()
+
+
 import re
 from telethon import TelegramClient, events, errors
 api_id = 26243748
