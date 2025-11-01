@@ -21,9 +21,9 @@ t.start()
 api_id = 26243748
 api_hash = "7abdc6cfd59c3c18c70bc5bdf8e22c7b"
 
-TARGET_CHAT_ID = int(os.environ["e_trade_e"])
+TARGET_CHAT_ID = "e_trade_e"
 
-SOURCE_CHAT_ID = int(os.environ["testjqwu"])
+SOURCE_CHAT_ID = "testjqwu"
 
 client = TelegramClient("forward_session", api_id, api_hash)
 
