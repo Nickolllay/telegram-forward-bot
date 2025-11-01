@@ -29,8 +29,7 @@ source_channel = 'zagovor_likvid'
 target_channel = '@_trade_e'
 MENTION_REPLACEMENT = '@'
 LINK_REPLACEMENT = '@'
-client = TelegramClient(session_name, api_id, api_hash)
-client = TelegramClient(session_name, api_id, api_hash)
+client = TelegramClient("forward_bot", api_id, api_hash)
 
 def clean_text(text: str) -> str:
     if not text:
